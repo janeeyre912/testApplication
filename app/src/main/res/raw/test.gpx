@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="sportractive.com" version="1.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd http://www.sportractive.com/xmlschemas/WorkoutExtension/v1 http://www.sportractive.com/xmlschemas/WorkoutExtension/v1/sportractive.xsd" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:s2t="http://www.sportractive.com/xmlschemas/WorkoutExtension/v1">
+	<metadata>
+		<bounds minlat="45.275244865008666" minlon="-74.19157856402002" maxlat="45.41191436813045" maxlon="-73.90698981314489" />
+		<extensions>
+			<s2t:sport>2</s2t:sport>
+			<s2t:fitness>0</s2t:fitness>
+			<s2t:weather>1</s2t:weather>
+			<s2t:temperature>23.91</s2t:temperature>
+			<s2t:energy>5767533</s2t:energy>
+			<s2t:minhr>0</s2t:minhr>
+			<s2t:maxhr>0</s2t:maxhr>
+			<s2t:meanhr>0.0</s2t:meanhr>
+		</extensions>
+	</metadata>
+	<trk>
+		<name>Baie-d'Urfé</name>
+		<desc></desc>
+		<splitseg>
+			<split>
+			    <avgSpeed>23.32</avgSpeed>
+				<distance>20</distance>
+				<startTime>2021-06-06T11:57:42.401Z</startTime>
+				<endTime>2021-06-06T12:27:42.401Z</endTime></split>
+		    <split>
+        	    <avgSpeed>27.32</avgSpeed>
+        		<distance>35</distance>
+        		<startTime>2021-06-06T12:27:42.401Z</startTime>
+        		<endTime>2021-06-06T12:47:42.401Z</endTime></split>
+			<split>
+            	<avgSpeed>28.32</avgSpeed>
+            	<distance>39</distance>
+            	<startTime>2021-06-06T12:47:42.401Z</startTime>
+            	<endTime>2021-06-06T13:07:42.401Z</endTime></split>
+            <split>
+                <avgSpeed>23.32</avgSpeed>
+                <distance>25</distance>
+                <startTime>2021-06-06T13:07:42.401Z</startTime>
+                <endTime>2021-06-06T13:27:42.401Z</endTime></split>
+		</splitseg>
+	</trk>
+</gpx>
