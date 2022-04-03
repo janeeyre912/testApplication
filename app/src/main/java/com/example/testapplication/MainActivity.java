@@ -1,31 +1,14 @@
 package com.example.testapplication;
 
-import android.location.Location;
 import android.os.Bundle;
 import android.os.Environment;
-import android.util.Log;
 import android.view.Menu;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,18 +23,32 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder info = new StringBuilder();
 
         File splitFile = new File(path);
-        info.append(splitFile.getPath()).append("\n\n");
+//        info.append(splitFile.getPath()).append("\n\n");
 
-        List<Split> gpxList = decodeSplit(splitFile);
+        Split split = new Split();
 
-        for(int i = 0; i < gpxList.size(); i++){
-           info.append(gpxList.get(i).getSplitInfo()).append("\n");
+        List<Split> splitList = split.decodeSplit(splitFile);
+
+        info.append("This workout includes ").append(splitList.size()).append(" splits: \n");
+
+        for(int i = 0; i < splitList.size(); i++){
+           info.append("Split ").append(i+1).append(" details:\n").append(splitList.get(i).getSplitInfo()).append("\n");
         }
 
+        Workout workout = new Workout(splitList);
+        Summary summary = new Summary();
+        double totalDistance = summary.calculateTotalDistance(workout);
+        double avgSpeed = summary.calculateAverageSpeed(workout);
 
-        Log.i("MainActivity", "info" + info );
+        String totalDistanceS = String.valueOf(totalDistance);
+        String avgSpeedS = String.valueOf(avgSpeed);
 
-//        textInfo.setText(info);
+        info.append("\n");
+       info.append("Total Distance: ").append(totalDistanceS).append("km").append("\n");
+       info.append("Average Speed: ").append(avgSpeedS).append("km/h");
+
+        textInfo.setText(info);
+
     }
 
     @Override
@@ -61,59 +58,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-    private List<Split> decodeSplit(File file){
-        List<Split> list = new ArrayList<>();
-
-        DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
-        try {
-            DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-            FileInputStream fileInputStream = new FileInputStream(file);
-            Document document = documentBuilder.parse(fileInputStream);
-            Element elementRoot = document.getDocumentElement();
-
-            NodeList nodelist_split = elementRoot.getElementsByTagName("split");
-
-            for (int i = 0; i < nodelist_split.getLength(); i++) {
-
-                Node node = nodelist_split.item(i);
-                NodeList childNotes = node.getChildNodes();
-
-                String newAvgSpeed = searchNodeListForTarget(childNotes, "avgSpeed");
-                String newDistance = searchNodeListForTarget(childNotes, "distance");
-                String startTime = searchNodeListForTarget(childNotes, "startTime");
-                String endTime = searchNodeListForTarget(childNotes, "endTime");
-
-                Double newAvgSpeedD = Double.parseDouble(newAvgSpeed);
-                Double newDistanceD = Double.parseDouble(newDistance);
-
-                Split newSplit = new Split(newAvgSpeedD, newDistanceD, startTime, endTime);
-                list.add(newSplit);
-
-            }
-            fileInputStream.close();
-        } catch (ParserConfigurationException e) {
-            Log.e("testApplication", "parse fileInputStream error", e);
-        } catch (SAXException e) {
-            Log.e("testApplication", "SAX error", e);
-        } catch (FileNotFoundException e) {
-            Log.e("testApplication", "file not found", e);
-        } catch (IOException e) {
-            Log.e("testApplication", "failed IO operation", e);
-        }
-
-        return list;
-
-    }
-
-    String searchNodeListForTarget(NodeList src, String target){
-
-        for(int i = 0; i < src.getLength(); i++){
-            Node n = src.item(i);
-            if (n.getNodeName().equals(target)){
-                return n.getFirstChild().getNodeValue();
-            }
-        }
-        return "";
-    }
 }
