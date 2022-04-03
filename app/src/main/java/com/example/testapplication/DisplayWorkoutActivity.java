@@ -10,12 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.io.File;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class DisplayWorkoutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_display_workout);
 
         String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Download/test.gpx";
 
