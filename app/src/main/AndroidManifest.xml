@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.userprofile">
+    package="com.example.testapplication">
 
     <application
         android:allowBackup="true"
@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UserProfile">
         <activity
-            android:name=".DisplayProfileActivity"
+            android:name="com.example.testapplication.DisplayProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".CreateProfileActivity"
+            android:name="com.example.testapplication.CreateProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".DisplayWorkoutActivity"
+            android:name="com.example.testapplication.DisplayWorkoutActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.testapplication.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

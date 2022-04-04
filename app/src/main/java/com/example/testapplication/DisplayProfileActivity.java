@@ -1,4 +1,4 @@
-package com.example.userprofile;
+package com.example.testapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 

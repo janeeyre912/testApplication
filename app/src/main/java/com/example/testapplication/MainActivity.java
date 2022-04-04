@@ -1,4 +1,4 @@
-package com.example.userprofile;
+package com.example.testapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button stopButton = findViewById(R.id.workoutButton);
+        stopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DisplayWorkoutActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

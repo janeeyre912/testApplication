@@ -39,4 +39,8 @@ public class Summary {
 			return 0;
 		}
 	}
+
+	public double calculateCalories(User user){
+        return 0;
+    }
 }

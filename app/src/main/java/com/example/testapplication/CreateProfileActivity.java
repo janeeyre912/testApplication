@@ -1,4 +1,4 @@
-package com.example.userprofile;
+package com.example.testapplication;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +20,6 @@ import android.widget.Toast;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.Calendar;
-import android.widget.LinearLayout;
 
 public class CreateProfileActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
     private EditText editFullName, editDOB, editWeight;

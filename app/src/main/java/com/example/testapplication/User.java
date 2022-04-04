@@ -1,4 +1,4 @@
-package com.example.userprofile;
+package com.example.testapplication;
 
 import java.io.Serializable;
 
