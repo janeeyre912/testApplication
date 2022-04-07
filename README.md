@@ -27,27 +27,27 @@ This is the README for the branch for the `Profile` component of the Workout App
         │   │   └── com
         │   │       └── example
         │   │           └── testapplication
-        │   │               ├── CreateProfileActivity.java
-        │   │               ├── DisplayProfileActivity.java
-        │   │               ├── DisplayWorkoutActivity.java
-        │   │               ├── MainActivity.java
-        │   │               ├── ProcessGPX.java       
-        │   │               ├── Split.java  
-        │   │               ├── Summary.java  
-        │   │               ├── User.java
-        │   │               ├── Workout.java
-        │   │               └── XMLGenerator.java
+        │   │               ├── CreateProfileActivity.java //Team 13
+        │   │               ├── DisplayProfileActivity.java //Team 13
+        │   │               ├── DisplayWorkoutActivity.java //Team 19
+        │   │               ├── MainActivity.java //Team 13 19
+        │   │               ├── ProcessGPX.java //Team 16
+        │   │               ├── Split.java  //Team 19
+        │   │               ├── Summary.java  //Team 19
+        │   │               ├── User.java //Team 13
+        │   │               ├── Workout.java //Team 19
+        │   │               └── XMLGenerator.java // Team 16
         │   └── res
         │       ├── drawable
         │       │   └── ic_launcher_background.xml
         │       ├── drawable-v24
         │       │   └── ic_launcher_foreground.xml
         │       ├── layout
-        │       │   ├── activity_create_profile.xml
-        │       │   ├── activity_display_profile.xml
-        │       │   ├── activity_display_workout.xml
-        │       │   ├── activity_main.xml
-        │       │   └── view_number_dialog.xml
+        │       │   ├── activity_create_profile.xml //Team 13
+        │       │   ├── activity_display_profile.xml //Team 13
+        │       │   ├── activity_display_workout.xml //Team 19
+        │       │   ├── activity_main.xml //Team 13 19
+        │       │   └── view_number_dialog.xml // Team 13
         │       ├── mipmap-anydpi-v26
         │       │   ├── ic_launcher.xml
         │       │   └── ic_launcher_round.xml
