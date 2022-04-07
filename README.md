@@ -16,19 +16,27 @@ This is the README for the branch for the `Profile` component of the Workout App
         ├── androidTest
         │   └── java
         │       └── com
-        │           └── example
-        │               └── userprofile
+        │           └── test
+        │               └── testapplication
+        │                   └── ExampleInstrumentedTest.java
+        |               └── userprofile
         │                   └── ExampleInstrumentedTest.java
         ├── main
         │   ├── AndroidManifest.xml
         │   ├── java
         │   │   └── com
         │   │       └── example
-        │   │           └── userprofile
+        │   │           └── testapplication
         │   │               ├── CreateProfileActivity.java
         │   │               ├── DisplayProfileActivity.java
+        │   │               ├── DisplayWorkoutActivity.java
         │   │               ├── MainActivity.java
+        │   │               ├── ProcessGPX.java       
+        │   │               ├── Split.java  
+        │   │               ├── Summary.java  
         │   │               └── User.java
+        │   │               └── Workout.java
+        │   │               └── XMLGenerator.java
         │   └── res
         │       ├── drawable
         │       │   └── ic_launcher_background.xml
@@ -37,6 +45,7 @@ This is the README for the branch for the `Profile` component of the Workout App
         │       ├── layout
         │       │   ├── activity_create_profile.xml
         │       │   ├── activity_display_profile.xml
+        │       │   ├── activity_display_workout.xml
         │       │   ├── activity_main.xml
         │       │   └── view_number_dialog.xml
         │       ├── mipmap-anydpi-v26
