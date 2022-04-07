@@ -34,8 +34,8 @@ This is the README for the branch for the `Profile` component of the Workout App
         │   │               ├── ProcessGPX.java       
         │   │               ├── Split.java  
         │   │               ├── Summary.java  
-        │   │               └── User.java
-        │   │               └── Workout.java
+        │   │               ├── User.java
+        │   │               ├── Workout.java
         │   │               └── XMLGenerator.java
         │   └── res
         │       ├── drawable
