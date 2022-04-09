@@ -141,14 +141,7 @@ public class Summary {
 		totalCalories = Workout.caloiresPerMunite()*hoursToMinutes();
 		
 	}
-    /*Calculate the total burnt calories per minute
-    * reference: https://codereview.stackexchange.com/questions/62371/calculating-total-number-of-calories-burned
-    */
-	 public static double caloriesPerMinute( double weight, double time) {
-	       
-			return value * getMet(weight) * poundToKilogram(weight) * time;
-	    }
-
+   
 	   /*
        convert pound to kilogram method 
        */
