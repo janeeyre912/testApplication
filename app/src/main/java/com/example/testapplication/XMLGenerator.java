@@ -139,7 +139,7 @@ public class XMLGenerator {
                     if (count == interval || i == ProcessGPX.getCount() - 1){
                         endTimeSplit = time[i];
                         distanceSplit = distanceSplit / 1000; //(m -> km)
-                        avgSpeedSplit = avgSpeedSplit / count;
+                        if (count != 0) avgSpeedSplit = avgSpeedSplit / count;
                         avgSpeedSplit = avgSpeedSplit * 3.6; // m/s -> km/h
                         Element split = doc.createElement("split");
                         splitseg.appendChild(split);
