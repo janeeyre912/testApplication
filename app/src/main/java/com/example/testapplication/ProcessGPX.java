@@ -212,7 +212,7 @@ public static String[] getTime() {
             // getTime() returns the number of milliseconds since January 1, 1970, 00:00:00 GMT represented by this Date object
             assert times[i - 1] != null;
             long diff = times[i].getTime() - times[i-1].getTime();
-            double diffSec = (double)(diff / (1000));
+            double diffSec = ((double)diff / (1000));
 
             double diffDist = distance[i];
 
