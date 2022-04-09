@@ -20,4 +20,12 @@ public class Workout{
     public void setSplitList(List<Split> splitList) {
         this.splitList = splitList;
     }
+     /*Calculate the total burnt calories per minute
+    * reference: https://codereview.stackexchange.com/questions/62371/calculating-total-number-of-calories-burned
+    */
+	 public static double caloriesPerMinute( double weight, double time) {
+	       
+			return value * getMet(weight) * poundToKilogram(weight) * time;
+	    }
+
 }
