@@ -119,7 +119,7 @@ public class Summary {
         float age = (float) currentDate.get(Calendar.YEAR) -dateOfBirth.get(Calendar.YEAR);
 
 
-        if (gender == GENDER_FEMALE) {
+        if (gender.equals(GENDER_FEMALE))) {
             return (float) (655.0955f + (1.8496f * 165) + (9.5634f * weightKg) - (4.6756f * age));
         } else {
             return (float) (66.4730f + (5.0033f * 175) + (13.7516f * weightKg) - (6.7550f * age));
