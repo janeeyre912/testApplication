@@ -112,7 +112,7 @@ public class Split {
                         double newAvgSpeedD = Double.parseDouble(newAvgSpeed);
                         double newDistanceD = Double.parseDouble(newDistance);
                         long newInterval = calculateInterval(startTime, endTime);
-                        float minInterval = newInterval / 60000;
+                        float minInterval = newInterval /(float) 60000;
 
                         Split newSplit = new Split(newAvgSpeedD, newDistanceD, startTime, endTime, minInterval);
                         list.add(newSplit);
