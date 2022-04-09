@@ -125,4 +125,41 @@ public class Summary {
             return (float) (66.4730f + (5.0033f * 175) + (13.7516f * weightKg) - (6.7550f * age));
         }
     }
+   /* Calculate the MET "metabolic equivalents"
+    @reutrn  met 
+   */
+   
+	 private static double getMet(double weight) {
+			double met = getWeight()*3.5;
+			return met;
+		}
+     /*Calculate the total burnt calories during the duration of the cycling training
+    * reference: https://codereview.stackexchange.com/questions/62371/calculating-total-number-of-calories-burned
+    * @param totalCalories
+    */
+	public void calculateBurntCalories (Workout workout){
+		totalCalories = Workout.caloiresPerMunite()*hoursToMinutes();
+		
+	}
+    /*Calculate the total burnt calories per minute
+    * reference: https://codereview.stackexchange.com/questions/62371/calculating-total-number-of-calories-burned
+    */
+	 public static double caloriesPerMinute( double weight, double time) {
+	       
+			return value * getMet(weight) * poundToKilogram(weight) * time;
+	    }
+
+	   /*
+       convert pound to kilogram method 
+       */
+		public static double poundToKilogram(double pound) {
+	        return pound / 2.2;
+	    }
+    /*
+       convert hours to minutes method 
+       */
+
+	    public static double hoursToMinutes(double hours) {
+	        return hours * 60;
+	    }
 }
